@@ -58,8 +58,6 @@ class AppServiceProvider extends ServiceProvider
             }
          * You can give any name as you desire based on the requirements
          */
-        
-        Resource::wrap('items');
-
+       // Resource::wrap('items');
     }
 }

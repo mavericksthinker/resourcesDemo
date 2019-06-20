@@ -39,4 +39,7 @@ class User extends JsonResource
 //            'status' => 'success'
 //        ];
 //    }
+     /**
+      * Please also refer AppServiceProviders for more sample examples
+      */
 }
