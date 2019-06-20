@@ -21,9 +21,9 @@ Route::get('/', function () {
 Route::get('/resources', function () {
    
     // For single entity with eager_loaded to avoid the N+1 problem
-//    $user = App\User::with('profile')->findOrFail(11);
+//    $user = App\User::with('profile')->findOrFail(3);
 //   
-//    return new User($user);
+//    return new UserResource($user);
 
     // For a collection of data
 //    $users = App\User::with('profile')->get();
@@ -31,8 +31,13 @@ Route::get('/resources', function () {
 //    return UserResource::collection($users);
 
     // For a collection of data with pagination
-    $users = App\User::with('profile')->paginate(3);
+//    $users = App\User::with('profile')->paginate(3);
+//
+//    return new UserCollection($users);
 
-    return new UserCollection($users);
+    // For single entity removing the data wrapper on the transformed data_structure
+    $user = App\User::with('profile')->findOrFail(3);
+   
+    return new UserResource($user);
     
 });

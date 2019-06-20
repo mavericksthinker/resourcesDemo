@@ -14,6 +14,17 @@ class UserCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        // return parent::toArray($request);
+        // Same as 
+//        return [
+//            'data' => $this->collection
+//        ];
+        return [
+            'data' => $this->collection,
+            // Because of collection we can add siblings to our data structure which was not possible even 
+            // using with() in User resource. Collection gives you more control over the Data_structure
+            'status'=>'success'
+        ];
+        
     }
 }

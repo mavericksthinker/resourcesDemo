@@ -33,10 +33,10 @@ class User extends JsonResource
      * @param \Illuminate\Http\Request $request
      * @return array
      */
-    public function with($request)
-    {
-       return [
-            'status' => 'success'
-        ];
-    }
+//    public function with($request)
+//    {
+//       return [
+//            'status' => 'success'
+//        ];
+//    }
 }
